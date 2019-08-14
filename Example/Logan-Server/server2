@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 app.post('/logupload', (req, res) => {
   let startUUID = req.header("mac_address")
   console.log("startUUID:" + startUUID)
-  let filePrePath = "./" + startUUID
+  let filePrePath = "./logs/" + startUUID
   // let tmpPath = "./" + startUUID + "_tmp.txt"
   console.log('Logan client upload log file');
   if (!req.body) {
@@ -140,4 +140,4 @@ const decodeLog = (buf, skips, filePrePath) => {
   }
 };
 
-app.listen(4000, () => console.log('Logan demo server listening on port 3000!'));
+app.listen(4000, () => console.log('Logan demo server listening on port 4000!'));
